@@ -1,0 +1,32 @@
+[[plugins]]
+repo = 'cespare/vim-toml'
+on_ft = ['toml']
+
+[[plugins]]
+repo = 'posva/vim-vue'
+on_ft = ['vue']
+
+[[plugins]]
+repo = 'uiiaoo/java-syntax.vim'
+on_ft = ['java']
+
+[[plugins]]
+repo = 'elzr/vim-json'
+on_ft = ['json']
+
+[[plugins]]
+repo = 'StanAngeloff/php.vim'
+on_ft = ['php']
+
+[[plugins]]
+repo = 'yuezk/vim-js'
+on_ft = ['javascript', 'javascript.jsx']
+
+[[plugins]]
+repo = 'maxmellon/vim-jsx-pretty'
+on_ft = ['javascript', 'javascript.jsx']
+
+#[[plugins]]
+#repo = 'plasticboy/vim-markdown'
+#on_ft = ['markdown']
+
