@@ -7,12 +7,12 @@ set fish_greeting
 # cd > ls
 function cd
   builtin cd $argv
-    ls -a
+    ls -a --group-directories-first
 end
 
 # ls command
-alias l="ls -l"
-alias ll="ls -la"
+alias l="ls -l --group-directories-first"
+alias ll="ls -la --group-directories-first"
 
 # for windows explorer
 alias open="explorer.exe"
