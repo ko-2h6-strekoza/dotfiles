@@ -2,7 +2,7 @@
 repo = 'morhetz/gruvbox'
 
 [[plugins]]
-repo = 'altercation/vim-colors-solarized'
+repo = 'sainnhe/gruvbox-material'
 
 [[plugins]]
 repo = 'vim-airline/vim-airline'
@@ -10,9 +10,23 @@ repo = 'vim-airline/vim-airline'
 [[plugins]]
 repo = 'vim-airline/vim-airline-themes'
 hook_add = '''
-  let g:airline_theme='gruvbox'
+  let g:airline_theme='gruvbox_material'
   let g:airline#extensions#tabline#enabled=1
   let g:airline_powerline_fonts=1
+'''
+
+[[plugins]]
+repo = 'edkolev/tmuxline.vim'
+hook_add = '''
+  let g:tmuxline_preset = {
+      \'a'    : '#S',
+      \'b'    : '#W',
+      \'c'    : '#H',
+      \'win'  : '#I #W',
+      \'cwin' : '#I #W',
+      \'x'    : '%a',
+      \'y'    : '#W %R',
+      \'z'    : '#H'}
 '''
 
 [[plugins]]
@@ -54,6 +68,9 @@ repo = 'tpope/vim-surround'
 
 [[plugins]]
 repo = 'jiangmiao/auto-pairs'
+
+[[plugins]]
+repo = 'tpope/vim-commentary'
 
 [[plugins]]
 repo = 'neoclide/coc.nvim'

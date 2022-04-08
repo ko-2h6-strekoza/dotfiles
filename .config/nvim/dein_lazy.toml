@@ -1,6 +1,9 @@
 [[plugins]]
 repo = 'cespare/vim-toml'
 on_ft = ['toml']
+hook_add = '''
+  au BufNewFile,BufRead *.toml setf toml
+'''
 
 [[plugins]]
 repo = 'posva/vim-vue'

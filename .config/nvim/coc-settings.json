@@ -31,6 +31,6 @@
     "snippet": "\ue60b",
     "typeParameter": "\uf728",
     "default": "\uf29c"
-  }
+  },
+  "javascript.suggestionActions.enabled": false
 }
-

@@ -19,6 +19,19 @@ set showcmd
 " クリップボードを共有
 set clipboard&
 set clipboard^=unnamedplus
+" クリップボードを共有(WSL2)
+let g:clipboard = {
+      \   'name': 'myClipboard',
+      \   'copy': {
+      \      '+': 'win32yank.exe -i',
+      \      '*': 'win32yank.exe -i',
+      \    },
+      \   'paste': {
+      \      '+': 'win32yank.exe -o',
+      \      '*': 'win32yank.exe -o',
+      \   },
+      \   'cache_enabled': 1,
+      \ }
 " 行番号を表示
 set number
 " 現在の行を強調表示
@@ -119,5 +132,5 @@ filetype plugin indent on
 syntax enable
 
 set termguicolors
-colorscheme gruvbox
+colorscheme gruvbox-material
 
