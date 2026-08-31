@@ -1,6 +1,6 @@
 # dotfiles
 
-fish + neovim の設定をGNU Stowで管理するリポジトリ。1回ブートストラップすれば環境が再現できることを目的にしている。
+dotfileの設定をGNU Stowで管理するリポジトリ。1回ブートストラップすれば環境が再現できることを目的にしている。
 
 ## 構成
 
@@ -12,8 +12,6 @@ bootstrap.sh          上記すべてを順番に実行するエントリポイ�
 ```
 
 Neovimは`apt`ではなく[公式GitHubリリース](https://github.com/neovim/neovim/releases)のtarballを`/opt/nvim`に展開する(`fish/.config/fish/config.fish`が`/opt/nvim`をPATHに追加済み)。これによりディストロのaptが古いバージョンのままでも最新の安定版Neovimを使える。
-
-補完エンジンは`nvim-cmp`ではなく[`blink.cmp`](https://github.com/saghen/blink.cmp)を使用している。
 
 ## セットアップ
 
