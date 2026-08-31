@@ -5,6 +5,8 @@ return {
     lazy = false,
     priority = 1000,
     config = function()
+      -- 0 = opaque, 1 = main window transparent, 2 = main window + sidebar + floating windows transparent
+      vim.g.gruvbox_material_transparent_background = 2
       vim.cmd("colorscheme gruvbox-material")
     end,
   },
