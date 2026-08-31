@@ -4,6 +4,9 @@ end
 
 set fish_greeting
 
+export PATH="$PATH:/opt/nvim/bin"
+export PATH="$HOME/.local/bin:$PATH"
+
 # zoxide (smarter cd)
 zoxide init fish | source
 
@@ -27,6 +30,3 @@ alias vim="nvim"
 
 alias cdc="cd /mnt/c"
 alias cdh="cd /mnt/c/Users/strekoza"
-
-export PATH="$PATH:/opt/nvim/"
-export PATH="$HOME/.local/bin:$PATH"
