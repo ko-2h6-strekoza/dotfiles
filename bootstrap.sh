@@ -20,6 +20,7 @@ steps=(
   "install-win32yank.sh"
   "link-dotfiles.sh"
   "install-fisher.sh"
+  "install-tmux-plugins.sh"
 )
 
 for step in "${steps[@]}"; do

@@ -7,6 +7,7 @@ dotfileの設定をGNU Stowで管理するリポジトリ。1回ブートスト�
 ```
 fish/.config/fish/   -> ~/.config/fish/   にstow
 nvim/.config/nvim/   -> ~/.config/nvim/   にstow
+tmux/.config/tmux/   -> ~/.config/tmux/   にstow
 scripts/              各種インストールスクリプト(bootstrap.shから呼ばれる)
 bootstrap.sh          上記すべてを順番に実行するエントリポイント
 ```
@@ -24,15 +25,16 @@ cd dotfiles
 
 `bootstrap.sh` は以下を順番に行う。
 
-1. `apt`パッケージ導入(build-essential, curl, fish, stow, ripgrep, fd-find, fzf, python3, git など)
+1. `apt`パッケージ導入(build-essential, curl, fish, stow, tmux, ripgrep, fd-find, fzf, python3, git など)
 2. Node.js LTSをNodeSource経由で導入(mason経由のLSPサーバー用)
 3. Neovim最新安定版を `/opt/nvim` に展開
 4. `eza`(公式apt repo)導入
 5. `zoxide`(公式インストールスクリプト)導入
 6. `win32yank.exe` を `~/.local/bin` に導入(WSLはbinfmt interopでWindows実行ファイルをそのまま実行できるため、Windows側への別途インストールは不要)
-7. `stow` で `~/.config/fish`, `~/.config/nvim` をこのリポジトリにリンク(既存ファイルがあれば `*.bak.<timestamp>` に退避)
+7. `stow` で `~/.config/fish`, `~/.config/nvim`, `~/.config/tmux` をこのリポジトリにリンク(既存ファイルがあれば `*.bak.<timestamp>` に退避)
 8. `fisher` を導入し `fish_plugins` に書かれたプラグイン(fisher本体, tide, fzf.fish)を導入
-9. `nvim --headless "+Lazy! sync" +qa` でプラグインを事前取得
+9. `tpm`(tmux plugin manager)を `~/.config/tmux/plugins/tpm` に導入し、`tmux.conf` に書かれたプラグインを導入
+10. `nvim --headless "+Lazy! sync" +qa` でプラグインを事前取得
 
 ### 手動で行う必要がある後続作業
 

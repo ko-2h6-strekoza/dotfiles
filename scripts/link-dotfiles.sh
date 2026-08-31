@@ -16,11 +16,12 @@ backup_if_exists() {
 
 backup_if_exists "$HOME/.config/fish"
 backup_if_exists "$HOME/.config/nvim"
+backup_if_exists "$HOME/.config/tmux"
 
 mkdir -p "$HOME/.config"
 
-echo "==> stowing fish + nvim into $HOME"
+echo "==> stowing fish + nvim + tmux into $HOME"
 cd "$REPO_DIR"
-stow -t "$HOME" fish nvim
+stow -t "$HOME" fish nvim tmux
 
-echo "==> linked. ~/.config/fish and ~/.config/nvim now point into $REPO_DIR"
+echo "==> linked. ~/.config/fish, ~/.config/nvim and ~/.config/tmux now point into $REPO_DIR"

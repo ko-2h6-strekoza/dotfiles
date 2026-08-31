@@ -14,6 +14,7 @@ sudo apt-get install -y \
   unzip \
   fish \
   stow \
+  tmux \
   ripgrep \
   fd-find \
   fzf \
