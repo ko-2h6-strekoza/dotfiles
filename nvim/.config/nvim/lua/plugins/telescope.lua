@@ -10,17 +10,19 @@ return {
       { ";h", "<cmd>Telescope help_tags<CR>" },
     },
 
-    opts = {
-      defaults = {
-        mappings = {
-          i = {
-            ["<C-h>"] = "which_key",
-          },
-          n = {
-            ["q"] = require("telescope.actions").close,
+    opts = function()
+      return {
+        defaults = {
+          mappings = {
+            i = {
+              ["<C-h>"] = "which_key",
+            },
+            n = {
+              ["q"] = require("telescope.actions").close,
+            },
           },
         },
-      },
-    },
+      }
+    end,
   },
 }
