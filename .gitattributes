@@ -1,0 +1,5 @@
+* text=auto eol=lf
+*.sh text eol=lf
+*.lua text eol=lf
+*.fish text eol=lf
+fish_plugins text eol=lf
