@@ -31,10 +31,11 @@ cd dotfiles
 4. `eza`(公式apt repo)導入
 5. `zoxide`(公式インストールスクリプト)導入
 6. `win32yank.exe` を `~/.local/bin` に導入(WSLはbinfmt interopでWindows実行ファイルをそのまま実行できるため、Windows側への別途インストールは不要)
-7. `stow` で `~/.config/fish`, `~/.config/nvim`, `~/.config/tmux` をこのリポジトリにリンク(既存ファイルがあれば `*.bak.<timestamp>` に退避)
-8. `fisher` を導入し `fish_plugins` に書かれたプラグイン(fisher本体, tide, fzf.fish)を導入
-9. `tpm`(tmux plugin manager)を `~/.config/tmux/plugins/tpm` に導入し、`tmux.conf` に書かれたプラグインを導入
-10. `nvim --headless "+Lazy! sync" +qa` でプラグインを事前取得
+7. `tree-sitter` CLIを公式GitHubリリースから `~/.local/bin` に導入(nvim-treesitterのパーサーのビルドに必要。aptの版は古く、npm版は非推奨のため)
+8. `stow` で `~/.config/fish`, `~/.config/nvim`, `~/.config/tmux` をこのリポジトリにリンク(既存ファイルがあれば `*.bak.<timestamp>` に退避)
+9. `fisher` を導入し `fish_plugins` に書かれたプラグイン(fisher本体, tide, fzf.fish)を導入
+10. `tpm`(tmux plugin manager)を `~/.config/tmux/plugins/tpm` に導入し、`tmux.conf` に書かれたプラグインを導入
+11. `nvim --headless "+Lazy! sync" +qa` でプラグインを事前取得
 
 ### 手動で行う必要がある後続作業
 

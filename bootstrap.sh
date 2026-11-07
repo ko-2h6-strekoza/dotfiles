@@ -17,6 +17,7 @@ steps=(
   "install-eza.sh"
   "install-zoxide.sh"
   "install-win32yank.sh"
+  "install-tree-sitter.sh"
   "link-dotfiles.sh"
   "install-fisher.sh"
   "install-tmux-plugins.sh"
@@ -30,7 +31,7 @@ done
 
 echo
 echo "########## pre-fetching neovim plugins ##########"
-PATH="/opt/nvim/bin:$PATH" nvim --headless "+Lazy! sync" +qa || true
+PATH="/opt/nvim/bin:$HOME/.local/bin:$PATH" nvim --headless "+Lazy! sync" +qa || true
 
 cat <<'EOF'
 
