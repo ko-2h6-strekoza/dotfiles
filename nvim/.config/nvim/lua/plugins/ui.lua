@@ -75,7 +75,7 @@ return {
     event = "VeryLazy",
     keys = {
       { "<Tab>", "<cmd>BufferLineCycleNext<CR>", desc = "Next tab" },
-      { "<Tab>", "<cmd>BufferLineCyclePrev<CR>", desc = "Prev tab" },
+      { "<S-Tab>", "<cmd>BufferLineCyclePrev<CR>", desc = "Prev tab" },
     },
     opts = {
       options = {
@@ -137,8 +137,7 @@ return {
       lsp = {
         override = {
           ["vim.lsp.util.convert_input_to_markdown_lines"] = true,
-          ["vim.lsp.util.styled_parts"] = true,
-          ["cmp.entry.get_documentation"] = true,
+          ["vim.lsp.util.stylize_markdown"] = true,
         },
       },
       presets = {
