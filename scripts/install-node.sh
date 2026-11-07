@@ -4,7 +4,7 @@ set -euo pipefail
 # apt's nodejs is frequently far behind; use NodeSource's LTS setup script instead.
 # Needed by mason for ts_ls / pyright / jsonls / yamlls (npm-installed language servers).
 
-NODE_MAJOR=20
+NODE_MAJOR=24
 
 if command -v node >/dev/null 2>&1; then
   current_major="$(node -v | sed -E 's/^v([0-9]+).*/\1/')"
