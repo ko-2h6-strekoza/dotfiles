@@ -2,8 +2,7 @@
 set -euo pipefail
 
 # One-shot environment setup for a fresh WSL2 Ubuntu install.
-# Run from anywhere inside the repo, e.g.:
-#   cd /mnt/c/Users/strekoza/dev/dotfiles && ./bootstrap.sh
+# Run from anywhere inside the repo: ./bootstrap.sh
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
