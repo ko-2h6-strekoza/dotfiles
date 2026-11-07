@@ -36,8 +36,8 @@ return {
       vim.lsp.enable("yamlls")
 
       vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float)
-      vim.keymap.set("n", "[e", vim.diagnostic.goto_prev)
-      vim.keymap.set("n", "]e", vim.diagnostic.goto_next)
+      vim.keymap.set("n", "[e", function() vim.diagnostic.jump({ count = -1, float = true }) end)
+      vim.keymap.set("n", "]e", function() vim.diagnostic.jump({ count = 1, float = true }) end)
 
       vim.keymap.set("n", "K", vim.lsp.buf.hover)
       vim.keymap.set("n", "gd", vim.lsp.buf.definition)
